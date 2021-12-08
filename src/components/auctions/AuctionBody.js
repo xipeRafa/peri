@@ -12,8 +12,10 @@ export const AuctionBody = () => {
 
   const [bool, setBool] = useState(false);
 
+  /* .filter((el) => el.deliver === currentUser?.email) */
+
   let entregas = docs
-    .filter((el) => el.deliver === currentUser?.email)
+    .filter((el) => el.deliver === 'perisur@gmail.com')
     .filter((el) => el.noDeliver === true)
     .filter((el) => el.sucursal === "perisur");
     
